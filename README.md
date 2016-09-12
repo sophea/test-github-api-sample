@@ -15,4 +15,8 @@
 
 http://localhost:8080/khalibre-assignment-sophea/search?q=liferay-portal
 
-==================
+http://localhost:8080/khalibre-assignment-sophea/search?q=liferay-portal&sort=stars
+
+http://localhost:8080/khalibre-assignment-sophea/search?q=liferay-portal&sort=forks&order=asc
+
+=======================================
