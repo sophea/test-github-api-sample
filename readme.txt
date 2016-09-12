@@ -1,5 +1,3 @@
-# test-github-api-sample
-
 - To run this backend project in JAVA technology with Maven build tool:
 
 -1 : install JAVA JDK version >=1.7.x  (http://www.oracle.com/technetwork/java/javase/downloads/index.html)
