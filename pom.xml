@@ -19,7 +19,7 @@
   
     </properties>
 	<build>
-		<finalName>backend</finalName>
+		<finalName>khalibre-assignment-sophea</finalName>
 
          <resources>
             <!-- base set of resources -->
