@@ -20,3 +20,9 @@ http://localhost:8080/khalibre-assignment-sophea/search?q=liferay-portal&sort=st
 http://localhost:8080/khalibre-assignment-sophea/search?q=liferay-portal&sort=forks&order=asc
 
 =======================================
+
+5 : GZip Compression the content :  com.github.ziplet.filter.compression.CompressingFilter
+
+6 : Integrate Test cases : run command >> mvn clean test
+
+ 

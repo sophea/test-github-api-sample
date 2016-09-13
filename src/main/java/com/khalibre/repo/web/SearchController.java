@@ -1,11 +1,10 @@
 package com.khalibre.repo.web;
 
-import java.io.InputStream;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.http.HttpResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,13 +46,14 @@ public class SearchController {
         
         LOG.debug(String.format("search  q = %s, sort %s, order %s", q, sort, order));
         
-        final InputStream result = service.search(q, sort, order);
+        final HttpResponse result = service.search(q, sort, order);
         if (result == null) {
-            response.setStatus(HttpStatus.NO_CONTENT.value());
+            response.setStatus(HttpStatus.SERVICE_UNAVAILABLE.value());
         } else {
+            response.setStatus(result.getStatusLine().getStatusCode());
             response.setContentType("application/json; charset=utf-8");
             //copy result into response
-            IOUtils.copy(result, response.getOutputStream());
+            IOUtils.copy(result.getEntity().getContent(), response.getOutputStream());
         }
     }
 

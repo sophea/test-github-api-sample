@@ -31,7 +31,19 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
+    <filter>
+        <filter-name>CompressingFilter</filter-name>
+        <filter-class>com.github.ziplet.filter.compression.CompressingFilter</filter-class>
+        <!--  debug -->
+<!--          <init-param> -->
+<!--             <param-name>debug</param-name> -->
+<!--             <param-value>true</param-value> -->
+<!--         </init-param> -->
+    </filter>
+     <filter-mapping>
+        <filter-name>CompressingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 	<servlet>
 		<servlet-name>spring-dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

@@ -1,26 +1,23 @@
 package com.khalibre.repo.service;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URI;
 
-import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
 
 import com.khalibre.server.Tracer;
 
-@Service
 public class GitHubService {
     private static final String HOST ="https://api.github.com/search/repositories";
     private static final Logger LOG = LoggerFactory.getLogger(GitHubService.class);
     
-    public InputStream search(String q, String sort, String order) throws Exception {
+    public HttpResponse search(String q, String sort, String order) throws Exception {
         
         final RequestBuilder requestBuilder =  RequestBuilder.create("GET")
                 .setUri(new URI(HOST));
@@ -33,12 +30,11 @@ public class GitHubService {
         final HttpUriRequest request = requestBuilder.build();
         
         Tracer.mark(String.format("start:%s", HOST));
-        InputStream result = null;
+        HttpResponse result = null;
         try {
-            CloseableHttpResponse response = getHttpClient().execute(request);
-            int statusCode = response.getStatusLine().getStatusCode();
+            result = getHttpClient().execute(request);
+            int statusCode = result.getStatusLine().getStatusCode();
             LOG.info(String.format("accessing to url %s , status %s", HOST, statusCode));
-            result = response.getEntity().getContent();
         } catch (IOException e) {
             LOG.error(e.getMessage(), e);
         }
