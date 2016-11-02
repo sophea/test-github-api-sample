@@ -1,4 +1,4 @@
-package com.khalibre.repo.web;
+package com.sample.repo.web;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.khalibre.repo.service.GitHubService;
+import com.sample.repo.service.GitHubService;
 
 
 
@@ -33,7 +33,7 @@ public class SearchController {
  
     /**
      *
-     * GET API http://localhost:8080/khalibre-assignment-sophea/search?q=liferay-portal
+     * GET API http://localhost:8080/sample/search?q=liferay-portal
      * 
      * @param q - The search keywords, as well as any qualifiers. required
      * @param sort - The sort field. One of stars, forks, or updated. Default: stars.

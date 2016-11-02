@@ -1,4 +1,4 @@
-package com.khalibre.repo.service;
+package com.sample.repo.service;
 
 import java.io.ByteArrayInputStream;
 
@@ -10,6 +10,8 @@ import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.message.BasicStatusLine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.sample.repo.service.GitHubService;
 
 /**
  * @author Sophea <a href='mailto:sopheamak@gmail.com'> sophea </a>

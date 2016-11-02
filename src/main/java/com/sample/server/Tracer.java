@@ -1,4 +1,4 @@
-package com.khalibre.server;
+package com.sample.server;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

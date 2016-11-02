@@ -1,11 +1,11 @@
-package com.khalibre.repo.web;
+package com.sample.repo.web;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 import org.junit.Test;
 import org.springframework.test.web.servlet.ResultActions;
 
-import com.khalibre.repo.server.AbstractWebAppTest;
+import com.sample.repo.server.AbstractWebAppTest;
 
 public class SearchContollerTest extends AbstractWebAppTest {
     

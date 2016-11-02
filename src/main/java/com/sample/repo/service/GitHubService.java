@@ -1,4 +1,4 @@
-package com.khalibre.repo.service;
+package com.sample.repo.service;
 
 import java.io.IOException;
 import java.net.URI;
@@ -11,7 +11,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.khalibre.server.Tracer;
+import com.sample.server.Tracer;
 
 public class GitHubService {
     private static final String HOST ="https://api.github.com/search/repositories";

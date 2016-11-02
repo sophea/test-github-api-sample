@@ -1,4 +1,4 @@
-package com.khalibre.server;
+package com.sample.server;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -12,17 +12,16 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceView;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import com.khalibre.repo.service.GitHubService;
+import com.sample.repo.service.GitHubService;
 
 @EnableWebMvc
 @Configuration
 //@EnableAspectJAutoProxy
-@ComponentScan(basePackages = "com.khalibre.repo")
+@ComponentScan(basePackages = "com.sample.repo")
 @PropertySource(name="application",value={"classpath:/application.properties"})
 @Lazy
 public class MvcConfig extends WebMvcConfigurerAdapter {

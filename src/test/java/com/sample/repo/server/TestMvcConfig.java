@@ -1,4 +1,4 @@
-package com.khalibre.repo.server;
+package com.sample.repo.server;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -10,10 +10,10 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 
-import com.khalibre.repo.service.GitHubService;
-import com.khalibre.repo.service.GitHubServiceTest;
-import com.khalibre.server.MvcConfig;
-import com.khalibre.server.SkipNullObjectMapper;
+import com.sample.repo.service.GitHubService;
+import com.sample.repo.service.GitHubServiceTest;
+import com.sample.server.MvcConfig;
+import com.sample.server.SkipNullObjectMapper;
 
 @Configuration
 @PropertySource(name = "application", value = { "classpath:/application.properties" })

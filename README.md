@@ -2,7 +2,8 @@
 [![Codecov](https://codecov.io/github/sophea/test-github-api-sample/coverage.svg?branch=master)](https://codecov.io/github/sophea/test-github-api-sample?branch=master)
 ![Java 7 required](https://img.shields.io/badge/java-7-brightgreen.svg)
 
-
+# Clone this project
+ git clone git@github.com:sophea/test-github-api-sample.git
 
 # To run this backend project in JAVA technology with Maven build tool:
 
@@ -17,11 +18,11 @@
    
 ===============Test result with API when server started(Jetty/Tomcat)=======
 
-http://localhost:8080/khalibre-assignment-sophea/search?q=liferay-portal
+http://localhost:8080/sample/search?q=liferay-portal
 
-http://localhost:8080/khalibre-assignment-sophea/search?q=liferay-portal&sort=stars
+http://localhost:8080/sample/search?q=liferay-portal&sort=stars
 
-http://localhost:8080/khalibre-assignment-sophea/search?q=liferay-portal&sort=forks&order=asc
+http://localhost:8080/sample/search?q=liferay-portal&sort=forks&order=asc
 
 =======================================
 

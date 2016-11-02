@@ -1,4 +1,4 @@
-package com.khalibre.repo.server;
+package com.sample.repo.server;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -28,7 +28,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.khalibre.server.SkipNullObjectMapper;
+import com.sample.server.SkipNullObjectMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @EnableWebMvc
