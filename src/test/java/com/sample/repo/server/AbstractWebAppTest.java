@@ -80,6 +80,9 @@ public abstract class AbstractWebAppTest {
     protected ResultActions status200(final ResultActions actions) throws Exception {
         return actions.andExpect(status().is(HttpStatus.OK.value()));
     }
+    protected ResultActions status302(final ResultActions actions) throws Exception {
+        return actions.andExpect(status().is(HttpStatus.FOUND.value()));
+    }
 
     protected ResultActions status400(final ResultActions actions) throws Exception {
         return actions.andExpect(status().is(HttpStatus.BAD_REQUEST.value()));

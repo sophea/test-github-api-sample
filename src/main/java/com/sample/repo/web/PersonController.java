@@ -51,14 +51,14 @@ public class PersonController {
 		
 	}
 	
-	@RequestMapping("/remove/{id}")
+	@RequestMapping("/person/remove/{id}")
     public String removePerson(@PathVariable("id") int id){
 		
         this.personService.removePerson(id);
         return "redirect:/persons";
     }
  
-    @RequestMapping("/edit/{id}")
+    @RequestMapping("/person/edit/{id}")
     public String editPerson(@PathVariable("id") int id, Model model){
         model.addAttribute("person", this.personService.getPersonById(id));
         model.addAttribute("listPersons", this.personService.listPersons());
