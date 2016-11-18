@@ -2,8 +2,12 @@
 [![Codecov](https://codecov.io/github/sophea/test-github-api-sample/coverage.svg?branch=master)](https://codecov.io/github/sophea/test-github-api-sample?branch=master)
 ![Java 7 required](https://img.shields.io/badge/java-7-brightgreen.svg)
 
+# Description
+This is about java web backend service with REST-APIs, hibernate database connection
+
 # Clone this project
  git clone git@github.com:sophea/test-github-api-sample.git
+  
 
 # To run this backend project in JAVA technology with Maven build tool:
 
@@ -24,10 +28,13 @@ http://localhost:8080/sample/search?q=liferay-portal&sort=stars
 
 http://localhost:8080/sample/search?q=liferay-portal&sort=forks&order=asc
 
+http://localhost:8080/sample/persons
+
+http://localhost:8080/sample/json
+
 =======================================
 
 5 : GZip Compression the content :  com.github.ziplet.filter.compression.CompressingFilter
 
 6 : Integrate Test cases : run command >> mvn clean test
 
- 
