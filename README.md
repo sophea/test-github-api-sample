@@ -1,7 +1,7 @@
 ![Travis Build](https://travis-ci.org/sophea/test-github-api-sample.svg?branch=master)
 [![Codecov](https://codecov.io/github/sophea/test-github-api-sample/coverage.svg?branch=master)](https://codecov.io/github/sophea/test-github-api-sample?branch=master)
 ![Java 8 required](https://img.shields.io/badge/java-8-brightgreen.svg)
-
+[![Sputnik](https://sputnik.ci/conf/badge)](https://sputnik.ci/app#/builds/sophea/test-github-api-sample)
 # Description
 This is about java web backend service with REST-APIs, hibernate database connection
 
