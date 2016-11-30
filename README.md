@@ -3,7 +3,7 @@
 ![Java 8 required](https://img.shields.io/badge/java-8-brightgreen.svg)
 [![Sputnik](https://sputnik.ci/conf/badge)](https://sputnik.ci/app#/builds/sophea/test-github-api-sample)
 # Description
-This is about java web backend service with Spring MVC REST-APIs, hibernate database connection
+This is about java web backend service with Spring MVC REST-APIs + hibernate database connection
 
 # Clone this project
  git clone git@github.com:sophea/test-github-api-sample.git
