@@ -6,10 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Table;
 
 /**
 * Entity bean with JPA annotations
-* Hibernate provides JPA implementation              dffffffffffffffffsddddddddddddddddddddddddddddd
+* Hibernate provides JPA implementation
 * @author Sophea
 *
 */
@@ -30,12 +31,12 @@ public class Person {
        return id;
    }
 
-   public void testIncorrectionAssignmentInIfCondition() {
-       boolean value = false;
-       if (value = false) {
-           ;
+   public void testMethoIncorrectionAssignmentInIfCondition() {
+       boolean value1 = false;
+       if (value1 = false) {
+           ;;
        }
-       boolean s = true;
+       boolean s1 = true;
    }
    public void setId(int id) {
        this.id = id;
