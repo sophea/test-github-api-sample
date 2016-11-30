@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Table;
 
 /**
 * Entity bean with JPA annotations
@@ -31,13 +30,6 @@ public class Person {
        return id;
    }
 
-   public void testMethoIncorrectionAssignmentInIfCondition() {
-       boolean value1 = false;
-       if (value1 = false) {
-           ;;
-       }
-       boolean s1 = true;
-   }
    public void setId(int id) {
        this.id = id;
    }
