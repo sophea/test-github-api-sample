@@ -93,9 +93,6 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 //</bean>
     }
 
-//    
-    // -------------- Services -----------------------
-   
     // -------------- Message Converters ----------------------
     
     @Override
@@ -119,7 +116,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     /**message properties*/
     @Bean
     public  MessageSource messageSource() {
-        ReloadableResourceBundleMessageSource message = new org.springframework.context.support.ReloadableResourceBundleMessageSource();
+        ReloadableResourceBundleMessageSource message = new ReloadableResourceBundleMessageSource();
         message.setBasename("classpath:messages");//classpath:messages
         message.setDefaultEncoding("UTF-8");
         return message;
