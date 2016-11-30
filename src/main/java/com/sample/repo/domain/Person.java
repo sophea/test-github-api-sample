@@ -6,10 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Table;
 
 /**
 * Entity bean with JPA annotations
-* Hibernate provides JPA implementation              dffffffffffffffffsddddddddddddddddddddddddddddd
+* Hibernate provides JPA implementation
 * @author Sophea
 *
 */
