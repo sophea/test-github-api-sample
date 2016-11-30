@@ -97,7 +97,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     // -------------- Services -----------------------
    
     // -------------- Message Converters ----------------------
-
+    
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
 
@@ -116,6 +116,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
+    /**message properties*/
     @Bean
     public  MessageSource messageSource() {
         ReloadableResourceBundleMessageSource message = new org.springframework.context.support.ReloadableResourceBundleMessageSource();
@@ -123,7 +124,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         message.setDefaultEncoding("UTF-8");
         return message;
     }
-////    // -------------- View Stuff -----------------------
+    // -------------- View Stuff -----------------------
     @Bean
     public UrlBasedViewResolver jspViewResolver() {
         UrlBasedViewResolver resolver = new org.springframework.web.servlet.view.UrlBasedViewResolver();
