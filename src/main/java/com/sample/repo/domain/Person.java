@@ -21,9 +21,9 @@ public class Person {
    @Column(name="id")
    @GeneratedValue(strategy=GenerationType.IDENTITY)
    private int id;
-   
+   /**name*/
    private String name;
-   
+   /**country*/
    private String country;
 
    public int getId() {
