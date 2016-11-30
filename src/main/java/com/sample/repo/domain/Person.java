@@ -30,6 +30,13 @@ public class Person {
        return id;
    }
 
+   public void testIncorrectionAssignmentInIfCondition() {
+       boolean value = false;
+       if (value = false) {
+           ;
+       }
+       boolean s = true;
+   }
    public void setId(int id) {
        this.id = id;
    }
