@@ -39,12 +39,12 @@ public class PersonController {
 	@RequestMapping(value= "/person/add", method = RequestMethod.POST)
 	public String addPerson(@ModelAttribute("person") Person p){
 		
-		if(p.getId() == 0){
+		if(p.getId() == null || p.getId() == 0L){
 			//new person, add it
-			this.personService.addPerson(p);
+			this.personService.create(p);
 		}else{
 			//existing person, call update
-			this.personService.updatePerson(p);
+			this.personService.update(p);
 		}
 		
 		return "redirect:/persons";
@@ -52,9 +52,15 @@ public class PersonController {
 	}
 	
 	@RequestMapping("/person/remove/{id}")
-    public String removePerson(@PathVariable("id") int id){
+    public String removePerson(@PathVariable("id") long id){
 		
-        this.personService.removePerson(id);
+	    Person domain = personService.getPersonById(id);
+        if ( domain == null) {
+            System.out.println(String.format("id [%s] is not found", id));
+            
+        } else {
+            this.personService.removePerson(id);
+        }
         return "redirect:/persons";
     }
  

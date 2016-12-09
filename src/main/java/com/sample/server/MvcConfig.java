@@ -59,8 +59,9 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-//        sessionFactory.setAnnotatedClasses(Person.class);
+      //  sessionFactory.setAnnotatedClasses(Person.class);
         sessionFactory.setPackagesToScan("com.sample.repo.domain");
+        
         
         sessionFactory.setHibernateProperties(hibernateProperties());
         

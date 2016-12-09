@@ -17,14 +17,19 @@ public class PersonServiceImpl implements PersonService {
 
 	@Override
 	@Transactional
-	public void addPerson(Person p) {
-		this.personDAO.addPerson(p);
+	public void create(Person p) {
+		this.personDAO.create(p);
 	}
 
 	@Override
 	@Transactional
-	public void updatePerson(Person p) {
-		this.personDAO.updatePerson(p);
+	public void update(Person p) {
+	    System.out.println("update method==========");
+	    Person domain = personDAO.getPersonById(p.getId());
+	    if (domain != null) {
+	        p.setVersion(domain.getVersion());
+	    }
+		this.personDAO.update(p);
 	}
 
 	@Override
@@ -35,14 +40,14 @@ public class PersonServiceImpl implements PersonService {
 
 	@Override
 	@Transactional
-	public Person getPersonById(int id) {
+	public Person getPersonById(long id) {
 		return this.personDAO.getPersonById(id);
 	}
 
 	@Override
 	@Transactional
-	public void removePerson(int id) {
-		this.personDAO.removePerson(id);
+	public void removePerson(long id) {
+	        this.personDAO.removePerson(id);
 	}
 
 }

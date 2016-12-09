@@ -22,12 +22,12 @@ public class PersonServiceTest extends AbstractWebAppTest {
     @org.junit.Test
     public void testSearch() throws Exception {
         //initial data
-        for (int i=0; i<=10; i++) {
+        for (long i=0; i<=10; i++) {
             Person p = new Person();
             //p.setId(100+i);
             p.setName("Name_" +i);
             p.setCountry("Country_"+i);
-            service.addPerson(p);
+            service.create(p);
             LOG.info("create persion " + i);
         }
         
@@ -39,11 +39,11 @@ public class PersonServiceTest extends AbstractWebAppTest {
         LOG.info("size : " + service.listPersons().size());
         
         Person p = new Person();
-        p.setId(10);
+        p.setId(10L);
         p.setName("update_Name_" );
         p.setCountry("updaet_Country_");
         //update
-        service.updatePerson(p);
+        service.update(p);
     }
 
 }
